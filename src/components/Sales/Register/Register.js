@@ -40,7 +40,7 @@ const Register = (props) => {
       </div>
       <div className="register-main">
         <div className="register-main__wrap row">
-          <div className="register__account col-3">
+          <div className="register__account col-lg-4 col-xl-3">
             <div className="register__account-card">
               <div className="register__account-b1">
                 <img className="register__account-img" src={Logo} alt=""></img>
@@ -71,10 +71,10 @@ const Register = (props) => {
               </div>
             </div>
           </div>
-          <div className="register__content col-9">
+          <div className="register__content col-lg-8 col-xl-9">
             <div className="register__lits row">
               {options.map(() => (
-                <div className="register__items col-3">
+                <div className="register__items col-lg-4 col-xl-3">
                   <div className="register__items-wrap ">
                     <div className="register__items-top ">
                       <div className="register__items-right ">
@@ -88,6 +88,10 @@ const Register = (props) => {
                 </div>
               ))}
             </div>
+            <button className="register__up-btn">
+              <i className="fa fa-arrow-up" aria-hidden="true"></i>
+              Masuk Kasir
+            </button>
           </div>
         </div>
       </div>
