@@ -6,6 +6,7 @@ import { ConnectedRouter } from 'connected-react-router'
 import store, { history } from './configureStore'
 import App from './App'
 
+import './assets/bootstrap.min.css';
 import 'antd/dist/antd.css';
 import './assets/fontawesome/css/all.min.css';
 

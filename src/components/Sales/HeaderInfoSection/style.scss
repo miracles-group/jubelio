@@ -1,0 +1,27 @@
+.headerInfoSection{
+  display: flex;
+  margin-bottom: 16px;
+  .headerInfoItem {
+    padding: 5px 9px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  .headerInfoItem:active{
+    background-color: rgba(0,0,0,0.1);
+  }
+  .jubelioPos {
+    flex: 0 0 175px;
+  }
+  .profile {
+    flex: 0 0 210px;
+    text-align: center;
+    .userName{
+      margin-left: 5px;
+    }
+  }
+  .grand {
+    flex: 0 1 100%;
+    min-width: 400px;
+  }
+}
