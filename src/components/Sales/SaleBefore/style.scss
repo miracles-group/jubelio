@@ -1,0 +1,44 @@
+.saleBefore{
+  .saleBeforeContent{
+    padding: 20px;
+    border: 1px solid black;
+    height: 622px;
+    width: 800px;
+    position: relative;
+    .saleItemConfirm{
+      width: 464px;
+      height: 131px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      box-shadow: rgba(0,0,0,0.3) 0 0 6px, rgba(0,0,0,0.15) 0 1px 6px;
+      padding:15px;
+      .header{
+        display: flex;
+        justify-content: space-between;
+        .ant-divider{
+          margin:15px 0;
+        }
+      }
+    }
+  }
+  .saleBeforeSection{
+    display: flex;
+  }
+  .saleBeforeItem{
+    img{
+      width:120px;
+    }
+  }
+  .ant-input-search{
+    box-sizing: border-box;
+    padding:5px 15px !important;
+    margin-bottom: 20px !important;
+    font-size: 25px !important;
+  }
+  .ant-input-suffix{
+    display: flex;
+    align-items: center;
+  }
+  
+}
