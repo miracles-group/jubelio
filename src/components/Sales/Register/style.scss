@@ -4,29 +4,48 @@
 
 .register {
   &-header {
+    font-family: 'Nunito', sans-serif;
     position: relative;
     display: flex;
     justify-content: space-between;
-    height: 200px;
-    background: #d9d9d9;
+    height: 320px;
+    background-image: url('../../../assets/images/banner1.jpg');
+    background-repeat: no-repeat;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 87px;
+      top: 40%;
+      left: 20%;
+      background-image: url('../../../assets/images/star.png');
+    }
   }
 
   &__address {
     position: absolute;
     bottom: 10px;
-    left: 36%;
+    left: 20%;
+
+    @include desktop {
+      left: 36%;
+    }
+
+    @include tablet {
+      left: 4%;
+    }
   }
 
   &__logo {
     padding: 10px;
     &-img {
-      width: 100px;
       margin: 10px;
     }
     &-title {
       padding: 20px 10px;
       text-align: center;
-      font-size: 20px;
+      font-size: 60px;
       font-weight: 900;
     }
   }
@@ -34,6 +53,11 @@
   &__dropdown {
     width: 400px;
     padding: 2px 52px 4px 10px;
+    border-radius: 10px;
+
+    &__menu {
+      border-radius: 10px;
+    }
 
     &__item {
       &::before {
@@ -60,10 +84,10 @@
   }
 
   &__logout-btn {
-    width: 100px;
-    height: 39px;
-    font-size: 15px;
-    background: #36cfc9;
+    font-weight: 600;
+    font-size: 18px;
+    background: transparent;
+    transform: skew(-10deg);
     border: none;
     border-radius: 5px;
     box-shadow: 3px 3px 5px #aaaaaa;
@@ -74,33 +98,64 @@
   }
 
   &-main {
-    margin: 30px;
-
-    @include desktop {
-      margin: 20px;
-    }
+    font-family: 'Nunito', sans-serif;
+    padding: 30px 0;
 
     &__wrap {
-      margin: 0;
+      margin: 0 20px;
     }
   }
 
   &__account {
     &-card {
-      border: solid 1px black;
+      border: solid 1px #f9f0ff;
+      box-shadow: 3px 3px 5px #aaaaaa;
       padding: 20px;
+      position: relative;
+      background: #efdbff;
+      color: #1f1f1f;
+      font-size: 16px;
+      font-weight: 600;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: -10px;
+        top: -10px;
+        width: 0;
+        height: 0;
+        border-top: 200px solid #d3adf7;
+        border-right: 150px solid transparent;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        right: -10px;
+        bottom: -10px;
+        width: 0;
+        height: 0;
+        border-bottom: 200px solid #d3adf7;
+        border-left: 150px solid transparent;
+      }
 
       i {
         padding: 10px;
         min-width: 20px;
+        color: #ffa940;
       }
     }
 
     &-b1 {
-      border-bottom: solid 1px black;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
       height: 170px;
       padding-bottom: 10px;
+      border-bottom: solid 1px black;
       p {
         font-size: 24px;
         font-weight: 900;
@@ -121,8 +176,15 @@
     }
 
     &-img {
-      width: 100px;
-      margin: 10px;
+      text-align: center;
+      border-radius: 50%;
+      width: 130px;
+      height: 130px;
+      border: 5px solid #fff;
+
+      img {
+        border-radius: 50%;
+      }
     }
   }
 
@@ -136,9 +198,24 @@
       justify-content: space-between;
     }
 
+    &-left {
+      background: #52c41a;
+      border-radius: 5px;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 5px;
+    }
+
     &-wrap {
-      border: solid 1px black;
+      box-shadow: 3px 3px 5px #aaaaaa;
       padding: 10px;
+      background-color: #adc6ff;
+      border-radius: 5px;
+      transition: all 0.4s;
+
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
     }
 
     &-code {
@@ -149,22 +226,51 @@
     &:nth-child(n + 5) {
       margin-top: 30px;
     }
+
+    @include desktop {
+      &:nth-child(n + 4) {
+        margin-top: 30px;
+      }
+    }
+
+    @include tablet {
+      &:nth-child(n) {
+        margin-top: 30px;
+      }
+    }
+
+    @include mobile {
+      &:nth-child(n) {
+        margin-top: 30px;
+      }
+    }
   }
 
   &__up-btn {
     position: absolute;
     left: 30%;
     bottom: 0;
-    padding: 0 10px;
+    padding: 0 20px;
     height: 40px;
-    border: transparent;
-    background: #36cfc9;
-    border-radius: 4px;
     text-align: left;
     font-size: 24px;
+    border: transparent;
+    transition: all 0.4s;
+    border-radius: 4px;
+    color: white;
+    background: #fa8c16;
+    box-shadow: 3px 3px 5px #aaaaaa;
 
     i {
       padding-right: 10px;
+    }
+
+    &:hover {
+      transform: scale(1.05, 1.05);
+    }
+
+    @include tablet {
+      bottom: -50px;
     }
   }
 }
